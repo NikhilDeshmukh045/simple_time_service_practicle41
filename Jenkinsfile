@@ -20,6 +20,7 @@ pipeline {
             docker logout
           '''
         }
+      }
     }
   }
 }
