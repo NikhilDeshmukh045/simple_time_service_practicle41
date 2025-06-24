@@ -20,10 +20,10 @@ USER appuser
 
 # Copy requirements and install Python dependencies
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install -r app/requirements.txt
 
 # Copy application files
-COPY app.py .
+COPY app/app.py .
 
 # Expose port Flask will run on
 EXPOSE 5000
