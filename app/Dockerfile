@@ -19,8 +19,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 USER appuser
 
 # Copy requirements and install Python dependencies
-COPY requirements.txt .
-RUN pip install -r app/requirements.txt
+COPY app/requirements.txt .
+RUN pip install -r requirements.txt
 
 # Copy application files
 COPY app/app.py .
