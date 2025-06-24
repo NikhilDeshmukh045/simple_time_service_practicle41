@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build Docker Image') {
       steps {
-        sh 'docker build -t ${DOCKER_REGISTRY}/simple_time_service:${BUILD_NUMBER} .'
+        sh 'docker build -t ${DOCKER_REGISTRY}/simple_time_service:${BUILD_NUMBER} -f app/Dockerfile .'
       }
     }
     stage('Push Docker Image to Dockerhub') {
